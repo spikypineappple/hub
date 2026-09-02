@@ -228,6 +228,16 @@ Do these in order, and report what actually happened at each one.
 Never say the session is saved unless the push succeeded.
 ```
 
+**A skill written during a session does not exist in that session.** Claude Code
+loads skills at startup, so `/end` will not be found until they exit and open a
+new session. Say that before they try it, because otherwise the first thing they
+see after you build the routine is it failing. Have them `/exit`, open a fresh
+session, say a couple of things, and run the routine there.
+
+This is the same rule that bit the install twice: **a terminal session cannot
+see software that arrived after it started.** Once they have met it three times
+it stops being a mystery, so name it early and name it every time.
+
 Then have them run it, themselves, on the session as it stands. Not you.
 
 - Open the session log it wrote, in Obsidian, and read the first few lines
