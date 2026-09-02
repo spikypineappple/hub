@@ -1,0 +1,14 @@
+{
+  "name": "hub-marketplace",
+  "owner": {
+    "name": "James Pursey",
+    "email": "james@replicatelabs.ai"
+  },
+  "plugins": [
+    {
+      "name": "hub",
+      "source": "./",
+      "description": "The Hub — turns one sales call into the follow-up that comes after it. Reply, CRM record, deal room plan, content, and nurture. Drafts only, never sends."
+    }
+  ]
+}
