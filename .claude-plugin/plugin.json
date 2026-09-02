@@ -1,6 +1,6 @@
 {
   "name": "hub",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "The Hub — turns one sales call into the follow-up that comes after it. Drafts a sendable reply, a CRM record, and a deal room plan from a transcript, mines calls for content, and writes grounded nurture touches. Drafts only, never sends. Built for Gap Selling.",
   "author": {
     "name": "James Pursey",

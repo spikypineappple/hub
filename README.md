@@ -186,6 +186,20 @@ produce looks like yours rather than like a template.
 
 Phase 1 sets the key up and proves it by generating one image.
 
+## Writing
+
+Two skills sit under everything you write, and you do not have to call them by
+name.
+
+- **`humanizer`** takes the tells out: the inflated symbolism, the rule of
+  three, the vague attributions, the em dashes, the words that only ever appear
+  in machine-written prose.
+- **`no-ai-slop`** is the floor underneath that, the way `impeccable` is the
+  floor under the design side.
+
+Ask for either directly when something reads wrong: "this sounds AI-written,
+fix it".
+
 ## Where things live
 
 ```
