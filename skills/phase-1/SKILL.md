@@ -122,29 +122,48 @@ else in Phase 1 depends on it.
 ## Part 3: the Design Pack
 
 The Design Pack is what makes the things they produce look like theirs rather
-than like a template. It generates images, and it needs a Google Gemini API key
-with billing enabled on the Google account behind it. Without billing the key
-exists and every generation fails, which looks like a broken install rather than
-an unpaid account, so check that first.
+than like a template. It is five skills that ship with the Hub: `design-pack`
+runs the pass, `impeccable`, `emil-design-eng` and `taste-skill` are the craft
+floor it holds work to, and `banana` is what actually generates images.
 
-Ask them to have the key to hand. Then set it as an environment variable, which
+Images need a Google Gemini API key with billing enabled on the Google account
+behind it. Without billing the key exists and every generation fails, which
+looks like a broken install rather than an unpaid account, so check that first.
+
+Ask them to have the key to hand. Then set it in their environment, which
 survives a restart, rather than pasting it into a file that gets committed.
 
-- **macOS.** `export GEMINI_API_KEY=<their key>` added to their shell profile.
-  That is `~/.zshrc` on any recent macOS. Adding the line is not enough for the
-  current terminal, so either `source` the profile or open a new one.
-- **Windows.** The PowerShell equivalent, set for the user rather than the
-  session so it survives a restart.
+**Set two names for the same key.** The tooling reads `GOOGLE_AI_API_KEY`, and
+`GEMINI_API_KEY` is the name Google's own console uses and the one they will
+have written down. Set both to the same value and neither of you has to remember
+which is which.
+
+- **macOS.** Add both `export` lines to their shell profile, which is `~/.zshrc`
+  on any recent macOS:
+
+  ```
+  export GEMINI_API_KEY=<their key>
+  export GOOGLE_AI_API_KEY=<their key>
+  ```
+
+  Adding the lines is not enough for the terminal already open, so either
+  `source` the profile or open a new one.
+- **Windows.** The PowerShell equivalent for both names, set for the user rather
+  than the session so they survive a restart.
 
 **Never write the key into a file inside the folder.** The folder is pushed to
 GitHub. If the key is already in a file there, stop, take it out, and tell them
-plainly that a key that has been committed should be rotated rather than
-reused, even to a private repo.
+plainly that a key that has been committed should be rotated rather than reused,
+even to a private repo.
 
 **Check:** generate one small image, and open it. Not "the key is set", not "no
-error". An image on disk that they have looked at. If it fails, read the actual
-error before changing anything: a billing error and a bad key say different
-things and have different fixes.
+error". An image on disk that they have looked at. Ask for something trivial and
+fast, a plain shape on a plain background, because this is a plumbing check and
+not a design exercise.
+
+If it fails, read the actual error before changing anything: a billing error, a
+missing key and a bad key say three different things and have three different
+fixes. Python 3 is all it needs beyond the key, and it is already on macOS.
 
 If it will not work today, record `design_pack: not connected` and move on. It
 is the one part of Phase 1 nothing else depends on.

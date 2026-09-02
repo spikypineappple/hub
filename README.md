@@ -59,7 +59,8 @@ About forty minutes, live. It sets up the five things everything else sits on:
 2. **Obsidian on the same folder.** A second window onto the work you already
    have, not a different place it goes.
 3. **The Design Pack.** What makes the things you produce look like yours rather
-   than like a template. Needs a Gemini API key with billing enabled.
+   than like a template. Five skills that ship with the Hub, and a Gemini API
+   key with billing enabled so it can generate images.
 4. **The end-of-session routine.** Writes down what happened, saves anything
    learned, pushes your folder to GitHub. You run it yourself before you finish.
    Nothing is finished until it has run.
@@ -166,6 +167,24 @@ unchanged? If yes, it gets rewritten.
 - **It will not invent a date.** You get `[DAY]` and you fill it in.
 
 ---
+
+## The Design Pack
+
+Five of the ten skills are the design side, and they are there so what you
+produce looks like yours rather than like a template.
+
+- **`design-pack`** runs the pass. Ask for a page, a component or an asset and it
+  pulls in the rest.
+- **`impeccable`** is the craft floor: hierarchy, spacing, accessibility, the
+  things that separate finished from nearly.
+- **`emil-design-eng`** is motion and the invisible details.
+- **`taste-skill`** is the dials, and the bans on the things that read as
+  AI-made.
+- **`banana`** generates images, using your own Gemini API key. It needs
+  `GOOGLE_AI_API_KEY` set in your environment, and Python 3, which you already
+  have.
+
+Phase 1 sets the key up and proves it by generating one image.
 
 ## Where things live
 
