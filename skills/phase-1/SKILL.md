@@ -157,13 +157,21 @@ plainly that a key that has been committed should be rotated rather than reused,
 even to a private repo.
 
 **Check:** generate one small image, and open it. Not "the key is set", not "no
-error". An image on disk that they have looked at. Ask for something trivial and
-fast, a plain shape on a plain background, because this is a plumbing check and
-not a design exercise.
+error". An image on disk that they have looked at. It saves to
+`~/Documents/nanobanana_generated/` and the command prints the full path.
 
-If it fails, read the actual error before changing anything: a billing error, a
-missing key and a bad key say three different things and have three different
-fixes. Python 3 is all it needs beyond the key, and it is already on macOS.
+**Ask for a real photograph, not a test pattern.** A plain shape on a plain
+background comes back as `finishReason: IMAGE_RECITATION` and no image, which
+looks exactly like a broken key and is not one. Describe a scene: an object, a
+surface, and where the light comes from. Something like a piece of fruit on a
+linen tablecloth in window light works every time and takes about twenty
+seconds.
+
+If it fails, read the actual error before changing anything. They say different
+things and have different fixes: `IMAGE_RECITATION` means the prompt was too
+thin, a billing error means the card is not attached, and a missing key means the
+environment variable did not survive the new terminal. Python 3 is all it needs
+beyond the key, and it is already on macOS.
 
 If it will not work today, record `design_pack: not connected` and move on. It
 is the one part of Phase 1 nothing else depends on.
